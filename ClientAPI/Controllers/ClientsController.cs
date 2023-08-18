@@ -20,7 +20,7 @@ namespace ClientAPI.Controllers
         }
 
         // GET: api/Clients
-        [HttpGet]
+        [HttpGet("GetClientes")]
         [SwaggerOperation(Summary = "Listar todos os clientes")]
         public async Task<ActionResult<IEnumerable<Client>>> GetAllClients()
         {
@@ -29,7 +29,7 @@ namespace ClientAPI.Controllers
         }
 
         // GET: api/Clients/5
-        [HttpGet("{id}")]
+        [HttpGet("GetClientesID")]
         [SwaggerOperation(Summary = "Obter um cliente pelo ID")]
         public async Task<ActionResult<Client>> GetClient(int id)
         {
@@ -45,7 +45,7 @@ namespace ClientAPI.Controllers
         }
 
         // POST: api/Clients
-        [HttpPost]
+        [HttpPost("CreateCliente")]
         [SwaggerOperation(Summary = "Criar um novo cliente")]
         public async Task<ActionResult<Client>> CreateClient(Client client)
         {
@@ -62,7 +62,7 @@ namespace ClientAPI.Controllers
         }
 
         // PUT: api/Clients/5
-        [HttpPut("{id}")]
+        [HttpPut("UpdateClienteById")]
         [SwaggerOperation(Summary = "Atualizar um cliente existente pelo ID")]
         public async Task<IActionResult> UpdateClient(int id, Client client)
         {
@@ -95,7 +95,7 @@ namespace ClientAPI.Controllers
         }
 
         // DELETE: api/Clients/5
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteClientesById")]
         [SwaggerOperation(Summary = "Remover um cliente pelo ID")]
         public async Task<IActionResult> DeleteClient(int id)
         {
